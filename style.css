@@ -1,0 +1,48 @@
+.kasten
+{
+ border: 10px solid red;
+ border-spacing:0px;
+ border-radius: 15px;
+ margin-left: auto;
+ margin-right: auto;
+}
+
+.kasten_inner 
+{
+ border: 5px solid red;
+}
+
+h1
+{
+ text-align : center;
+}
+
+@media screen and (orientation:portrait)
+{
+  .kasten
+  {
+   width : 100vw;
+   height : 80vw;
+  }
+
+  .flasche
+  {
+   width : 100%;
+   height : auto;
+  }
+}
+
+@media screen and (orientation:landscape)
+{
+  .kasten
+  {
+   height : 80vh;
+   width : 100vh;
+  }
+
+  .flasche
+  {
+   height : 100%;
+   width : auto;
+  }
+}
