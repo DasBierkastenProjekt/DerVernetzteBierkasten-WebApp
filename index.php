@@ -1,14 +1,14 @@
 <html>
 <head>
-<meta charset="utf-8">
-<meta name="author" content="Karsten Lehmann">
-<noscript>
-   <meta http-equiv="refresh" content="1" >
-</noscript>
-<link rel="icon" href="/favicon.ico" type="image/vnd.microsoft.icon">
-<title>Der vernetzte Bierkasten</title>
-<link rel="stylesheet" href="style.css" type="text/css">
-<script src="bierkasten.js"></script>
+  <meta charset="utf-8">
+  <meta name="author" content="Karsten Lehmann">
+  <noscript>
+    <meta http-equiv="refresh" content="1" >
+  </noscript>
+  <link rel="icon" href="/favicon.ico" type="image/vnd.microsoft.icon">
+  <title>Der vernetzte Bierkasten</title>
+  <link rel="stylesheet" href="style.css" type="text/css">
+  <script src="bierkasten.js"></script>
 </head>
 <body onload="onload()">
 <div>
@@ -18,14 +18,13 @@
 <?php
 function img ($val, $i) {
     global $img;
-    if ($val == 0) {
-        echo "    <td class='kasten_inner'><img class='flasche' id='flasche".$i."' src='leer.png'></td>\n";
+    if ($val == "0") {
+        echo "    <td class='kasten_inner'><img class='flasche' id='Flasche".$i."' src='leer.png'></td>\n";
     } else {
-        echo "    <td class='kasten_inner'><img class='flasche' id='flasche".$i."' src='voll.png'></td>\n";
+        echo "    <td class='kasten_inner'><img class='flasche' id='Flasche".$i."' src='voll.png'></td>\n";
     }
 }
-
-$stat = explode("", file_get_contents("http://localhost:6000/get_bier_data"));
+$stat = file_get_contents("http://localhost:6000/get_bier_data");
 
 for ($i = 1; $i <= 20; $i++) {
     if ($i % 5 == 1) {

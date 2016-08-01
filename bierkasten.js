@@ -6,7 +6,7 @@ function update_bottles () {
             change_bottles(xmlhttp.responseText);
         }
     }
-    xmlhttp.open("GET","get_bier_data",true);
+    xmlhttp.open("GET","get_bier_data.php",true);
     xmlhttp.send();
 }
 
@@ -17,7 +17,7 @@ function change_bottles (data) {
         } else {
             src = "voll.png";
         }
-        document.getElementById("flasche"+(i+1).toString()).src = src;
+        document.getElementById("Flasche"+(i+1).toString()).src = src;
     }
 }
 
